@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		/*.one{
+			background: blue;
+			color: #fff;
+		}*/
+	</style>
+</head>
+<body> 
+	<img src="on.jpg"><br>
+	<button onclick="onBulb()">On</button>
+	<button onclick="offBulb()">Off</button>
+
+	<!-- <button onclick="changeText()">Click</button> -->
+
+
+	<script type="text/javascript">
+		// function changeText()
+		// {
+		// 	var result = document.querySelectorAll('h1') //[0,1,2,3]
+		// 	for(var i=0; i<result.length; i++)
+		// 	result[i].style.color=("yellow");
+
+		// 	document.querySelector('h1').classList.toggle('one')
+		// }
+
+		function onBulb()
+		{
+			document.querySelector('img').src="on.jpg"
+		}
+		function offBulb()
+		{
+			document.querySelector('img').src="off.jpg"
+		}
+
+
+	</script>
+</body> 
+</html>
+</html>

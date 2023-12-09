@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title> </title>
+	<style type="text/css">
+		.myan{
+			display: none;
+		}
+		.light{
+			display: none;
+		}
+
+		.eng2{
+			display: none;
+		}
+
+		.myan2{
+			display: none;
+		}
+
+	</style>
+</head>
+<body>
+	<button onclick="changeMyanmar()">Myanmar</button>
+	<button  onclick="changeEnglish()">English</button>
+	<button class="dark" onclick="dark()">Dark</button>
+	<button class="light" onclick="light()">Light</button>
+
+	<p class="eng">If you like Dark mode, press 'Dark'</p>
+	<p class="myan">မင်း Dark modeကို ကြိုက်ရင် Darkကိုနှိပ်ပါ..</p>
+
+	<p class="eng2">If you like Lignt mode, press 'Light'</p>
+	<p class="myan2">မင်း Light modeကို ကြိုက်ရင် Lightကိုနိပ်ပါ..</p>
+
+	<script type="text/javascript">
+		function changeMyanmar()
+		{
+			document.querySelector('.myan').style.display='block'
+			document.querySelector('.eng').style.display='none'
+		}
+		function changeEnglish()
+		{
+			document.querySelector('.eng').style.display='block'
+			document.querySelector('.myan').style.display='none'
+		}
+
+		function dark()
+		{
+			document.querySelector('body').style.background = 'black'
+			document.querySelector('body').style.color = '#fff'
+			document.querySelector('.dark').style.display= 'none'
+			document.querySelector('.light').style.display= 'inline'
+
+			if(document.querySelector('.light').style.display== 'inline' && document.querySelector('.myan').style.display == 'block')
+			{
+				document.querySelector('.myan2').style.display = 'block';
+				document.querySelector('.myan').style.display = 'none';
+			}
+			else if (document.querySelector('.light').style.display== 'inline' && document.querySelector('.eng').style.display == 'block')
+			{
+				document.querySelector('.eng2').style.display = 'block';
+				document.querySelector('.eng').style.display = 'none';
+			}
+		}
+
+		function light()
+		{
+			document.querySelector('body').style.background = 'white'
+			document.querySelector('body').style.color = '#000'
+			document.querySelector('.light').style.display= 'none'
+			document.querySelector('.dark').style.display= 'inline'
+
+			if(document.querySelector('.dark').style.display== 'inline' && document.querySelector('.myan2').style.display == 'block')
+			{
+				document.querySelector('.myan').style.display = 'block';
+				document.querySelector('.myan2').style.display = 'none'
+			}
+			else if(document.querySelector('.dark').style.display== 'inline' && document.querySelector('.eng2').style.display == 'block')
+			{
+				document.querySelector('.eng').style.display = 'block';
+				document.querySelector('.eng2').style.display = 'none'
+
+			}
+		}
+
+	</script>
+</body>
+</html>
